@@ -5,6 +5,7 @@ import random
 
 
 def check_hashseed() -> bool:
+    """Need to set PYTHONHASHSEED=0 in env variable"""
     if hash("GOD") == -3890164749404887474:
         print("Hash seed confirmed.")
         return True

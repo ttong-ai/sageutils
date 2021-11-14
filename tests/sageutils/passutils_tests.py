@@ -11,3 +11,7 @@ def test_permutate():
         == "one two three four five six seven eight nine ten"
     )
     print("Permutation tests passed")
+
+
+def test_check_hashseed():
+    assert check_hashseed()
