@@ -1,5 +1,10 @@
 # sageutils
 Common utility functions
+(Supported Python version: 3.8.0+)
+
+### Install dependencies:
+Make sure you install to the correct Python environment.
+`pip install -r requirements.txt` or `pip3 install -r requirements.txt`
 
 
 ### passutils.py
@@ -29,4 +34,4 @@ one two three four five six seven eight nine ten
 ```
 
 ## Disclaimer
-The password utiltiy functions are provided as is. We are not responsible for any losses due to misuses or forgotten personal key or any bugs. You will need to test it and feel comfortable with the process before use it.
+The password utiltiy functions are provided as is. We are not responsible for any losses due to misuses or forgotten personal key or any bugs. You will need to test it and feel comfortable with the process before using it.
