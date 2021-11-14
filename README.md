@@ -11,7 +11,7 @@ Make sure you install to the correct Python environment.
 
 `permutate` and `reverse_permutate` use SHA256 to cryptographically add puseudorandom permutation to the mnemonic pass phrases commonly seen in the crypto world.
 
-If the mnemonic pass phrase is `one two three four five six seven eight nine ten`, you can randomize it by adding an easy-to-remember personal `key`.  In the following example, if the `key` is `test`, the randomized pass phrase would be `one four ten five eight three six seven two nine`. You can store this permutated version of passphrase in your cloud-based password managers. Even if a bad actor somehow hacked your password manager and stole your randomized private key phrase due to security breach, it would be almost impossible for the bad actor to figure out the correct sequence to your private pass phrase. You will have precious time to move your funds to newly secured locations. (It is still important to keep best security practices for your password managers!) 
+If the mnemonic pass phrase is `one two three four five six seven eight nine ten`, you can randomize it by adding an easy-to-remember personal `key`.  In the following example, if the `key` is `disney`, the randomized pass phrase would be `one four ten five eight three six seven two nine`. You can store this permutated version of passphrase in your cloud-based password managers. Even if a bad actor somehow hacked your password manager and stole your randomized private key phrase due to security breach, it would be almost impossible for the bad actor to figure out the correct sequence to your private pass phrase. You will have precious time to move your funds to newly secured locations. (It is still important to keep best security practices for your password managers!) 
 
 When you need to use your private pass phrase, just use the `reverse_permutate` command with the same personal `key`. This can be generated only when you need to use the private pass phrase. But do not store it anywhere!! 
 
@@ -20,14 +20,14 @@ You do need to always remember your personal `key`, this is your responsibility.
 Command line usage:
 
 ```Python
-python passutils.py permutate "one two three four five six seven eight nine ten" --key="test"
+python passutils.py permutate "one two three four five six seven eight nine ten" --key="disney"
 
 Output:
-one four ten five eight three six seven two nine
+eight seven four nine three five two ten one six
 ```
 
 ```Python
-python passutils.py permutate "one four ten five eight three six seven two nine" --key="test"
+python passutils.py permutate "eight seven four nine three five two ten one six" --key="disney"
 
 Output:
 one two three four five six seven eight nine ten
