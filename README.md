@@ -28,7 +28,7 @@ eight seven four nine three five two ten one six
 ```
 
 ```Python
-python passutils.py permutate "eight seven four nine three five two ten one six" --key="disney"
+python passutils.py reverse_permutate "eight seven four nine three five two ten one six" --key="disney"
 
 Output of original sequence:
 one two three four five six seven eight nine ten
