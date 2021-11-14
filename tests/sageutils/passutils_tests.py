@@ -1,5 +1,6 @@
 from sageutils.passutils import *
 
+
 def test_permutate():
     assert (
         permutate("one two three four five six seven eight nine ten")
