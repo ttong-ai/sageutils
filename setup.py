@@ -7,7 +7,7 @@ long_description = "Sage common utilities library"
 setup(
     name="sageutils",
     packages=find_packages(),
-    scripts=["scripts/passutils.py"],
+    scripts=["scripts/passutils"],
     version=__version__,
     description="Sage common utilities library",
     long_description=long_description,
@@ -17,5 +17,8 @@ setup(
     license="MIT",
     python_requires=">=3.8",
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "cryptography",
+        "fire",
+    ],
 )
