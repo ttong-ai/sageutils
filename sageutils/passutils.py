@@ -15,41 +15,39 @@ def check_hashseed() -> bool:
         return False
 
 
-class Permutater:
-    @classmethod
-    def permutate(cls, input: str, key: str = None):
-        """Input should be a space delimited word string"""
-        if not key:
-            print("No key specified, will used the default: test")
-            key = "test"
-        words = [w.strip() for w in input.split()]
-        wc = len(words)
-        seq_orig = list(range(wc))
-        seq = copy(seq_orig)
-        m = hashlib.sha256()
-        m.update(key.encode() if isinstance(key, str) else key)
-        random.seed(m.hexdigest())
-        random.shuffle(seq)
-        return " ".join([words[i] for i in seq])
+def permutate(input: str, key: str = None):
+    """Input should be a space delimited word string"""
+    if not key:
+        print("No key specified, will used the default: test")
+        key = "test"
+    words = [w.strip() for w in input.split()]
+    wc = len(words)
+    seq_orig = list(range(wc))
+    seq = copy(seq_orig)
+    m = hashlib.sha256()
+    m.update(key.encode() if isinstance(key, str) else key)
+    random.seed(m.hexdigest())
+    random.shuffle(seq)
+    return " ".join([words[i] for i in seq])
 
-    @classmethod
-    def reverse_permutate(cls, input: str, key: str = None):
-        """Input should be a space delimited word string"""
-        if not key:
-            print("No key specified, will used the default: test")
-            key = "test"
-        words = [w.strip() for w in input.split()]
-        wc = len(words)
-        seq_orig = list(range(wc))
-        seq = copy(seq_orig)
-        m = hashlib.sha256()
-        m.update(key.encode() if isinstance(key, str) else key)
-        random.seed(m.hexdigest())
-        random.shuffle(seq)
-        tp = list(zip(seq_orig, seq))
-        tp.sort(key=lambda x: x[1])
-        seq_rev = [t[0] for t in tp]
-        return " ".join([words[i] for i in seq_rev])
+
+def reverse_permutate(input: str, key: str = None):
+    """Input should be a space delimited word string"""
+    if not key:
+        print("No key specified, will used the default: test")
+        key = "test"
+    words = [w.strip() for w in input.split()]
+    wc = len(words)
+    seq_orig = list(range(wc))
+    seq = copy(seq_orig)
+    m = hashlib.sha256()
+    m.update(key.encode() if isinstance(key, str) else key)
+    random.seed(m.hexdigest())
+    random.shuffle(seq)
+    tp = list(zip(seq_orig, seq))
+    tp.sort(key=lambda x: x[1])
+    seq_rev = [t[0] for t in tp]
+    return " ".join([words[i] for i in seq_rev])
 
 
 def encrypt(message: bytes, key: bytes) -> bytes:
@@ -58,7 +56,3 @@ def encrypt(message: bytes, key: bytes) -> bytes:
 
 def decrypt(token: bytes, key: bytes) -> bytes:
     return Fernet(key).decrypt(token)
-
-
-if __name__ == "__main__":
-    fire.Fire(Permutater)
