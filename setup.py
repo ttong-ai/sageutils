@@ -1,4 +1,4 @@
-from sageutils import __version__
+from src.sageutils import __version__
 from setuptools import find_packages, setup
 
 long_description = "Sage common utilities library"

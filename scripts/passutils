@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 import fire
-from sageutils.passutils import (
+from src.sageutils.passutils import (
     permutate as _permutate,
-    reverse_permutate as _reverse_permutate,
 )
 
 
