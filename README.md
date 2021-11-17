@@ -1,6 +1,8 @@
 # sageutils
 Common utility functions
 
+https://github.com/ttong-ai/sageutils/blob/main/README.md
+
 Supported Python version: 3.8.0+
 
 ### Install dependencies:
@@ -21,14 +23,14 @@ You do need to always remember your personal `key`, this is your responsibility.
 Command line usage:
 
 ```Python
-python passutils.py permutate "one two three four five six seven eight nine ten" --key="disney"
+passutil permutate "one two three four five six seven eight nine ten" --key="disney"
 
 Output with encrypted permutation:
 eight seven four nine three five two ten one six
 ```
 
 ```Python
-python passutils.py reverse_permutate "eight seven four nine three five two ten one six" --key="disney"
+passutils reverse-permutate "eight seven four nine three five two ten one six" --key="disney"
 
 Output of original sequence:
 one two three four five six seven eight nine ten
