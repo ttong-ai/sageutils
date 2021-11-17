@@ -55,7 +55,7 @@ setup(
     author="Tony Tong",
     author_email="ttong@pro-ai.org",
     license="MIT",
-    python_requires=">=3.8",
+    python_requires=">=3.8, <4.0",
     include_package_data=True,
     install_requires=[
         "cryptography",
