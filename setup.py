@@ -7,7 +7,7 @@ long_description = "Sage common utilities library"
 setup(
     name="sageutils",
     packages=find_packages(),
-    scripts=["scripts/passutils"],
+    scripts=["scripts/passutil"],
     version=__version__,
     description="Sage common utilities library",
     long_description=long_description,
