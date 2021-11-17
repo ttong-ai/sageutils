@@ -1,4 +1,4 @@
-from src.sageutils.passutils import *
+from sageutils.passutils import *
 
 
 def test_permutate():

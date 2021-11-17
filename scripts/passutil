@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import fire
-from src.sageutils.passutils import (
+from sageutils.passutils import (
     permutate as _permutate,
+    reverse_permutate as _reverse_permutate,
+
 )
 
 
@@ -12,7 +14,7 @@ class Permutater:
 
     @classmethod
     def reverse_permutate(cls, input: str, key: str = None):
-        return _permutate(input=input, key=key)
+        return _reverse_permutate(input=input, key=key)
 
 
 if __name__ == "__main__":

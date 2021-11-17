@@ -1,6 +1,5 @@
 from copy import copy
 from cryptography.fernet import Fernet
-import fire
 import hashlib
 import random
 
