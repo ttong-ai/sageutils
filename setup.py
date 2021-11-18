@@ -6,7 +6,7 @@ Common utility functions
 
 https://github.com/ttong-ai/sageutils/blob/main/README.md
 
-Supported Python version: 3.8.0+
+Supported Python version: 3.6+
 
 ### Install dependencies:
 Make sure you install to the correct Python environment.
