@@ -30,7 +30,7 @@ eight seven four nine three five two ten one six
 ```
 
 ```Python
-passutils reverse-permutate "eight seven four nine three five two ten one six" --key="disney"
+passutil reverse-permutate "eight seven four nine three five two ten one six" --key="disney"
 
 Output of original sequence:
 one two three four five six seven eight nine ten

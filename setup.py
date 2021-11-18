@@ -33,7 +33,7 @@ eight seven four nine three five two ten one six
 ```
 
 ```Python
-passutils reverse-permutate "eight seven four nine three five two ten one six" --key="disney"
+passutil reverse-permutate "eight seven four nine three five two ten one six" --key="disney"
 
 Output of original sequence:
 one two three four five six seven eight nine ten
@@ -55,7 +55,7 @@ setup(
     author="Tony Tong",
     author_email="ttong@pro-ai.org",
     license="MIT",
-    python_requires=">=3.8, <4.0",
+    python_requires=">=3.6, <4.0",
     include_package_data=True,
     install_requires=[
         "cryptography",
