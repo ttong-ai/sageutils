@@ -5,9 +5,15 @@ https://github.com/ttong-ai/sageutils/blob/main/README.md
 
 Supported Python version: 3.6+
 
-### Install dependencies:
+### Installation through Pypi
+`pip3 install sageutils`
+
+### Install from source:
 Make sure you install to the correct Python environment.
+
 `pip install -r requirements.txt` or `pip3 install -r requirements.txt`
+
+`python3 setup.py install`
 
 
 ### passutils.py
